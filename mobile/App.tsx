@@ -1,10 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+interface ButtonProps{
+  title?: string
+}
+
+function Button(props: ButtonProps){
+  return (
+    <TouchableOpacity> 
+      <Text>
+        {props.title ? props.title : "NULL"}
+      </Text>
+    </TouchableOpacity>
+  )
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Hello!</Text>
+      <Button title='T1'/>
+      <Button title='T2'/>
+      <Button />
       <StatusBar style="auto" />
     </View>
   );
