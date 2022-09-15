@@ -1,22 +1,10 @@
-import { Image, ImageBackground, ScrollView, View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { Image, View, FlatList} from 'react-native';
 import { styles } from './styles';
 
 import logoImg from '../../assets/logo-nlw-esports.png'
 import Heading from '../../components/Heading';
-import { IGame, GAMES } from '../../utils/games';
+import {GAMES } from '../../utils/games';
 import { GameCard } from '../../components/GameCard';
-
-// let RenderGame = ({id, name, ads, cover} : IGame) => {
-//     return (
-//         <TouchableOpacity>
-//             <View style={styles.gameContainer}>
-//                 <Image source={cover} />
-//                 <Text style={styles.gameTitle}>{name}</Text>
-//                 <Text style={styles.gameAds}>{ads} anúncios</Text>
-//             </View>
-//         </TouchableOpacity>
-//     )
-// }
 
 
 export function Home() {
@@ -32,8 +20,7 @@ export function Home() {
             keyExtractor={item => item.id} 
             horizontal
             showsHorizontalScrollIndicator={false}
-        />        
-        {/* <GameCard data={GAMES[0]} /> */}
+        />
     </View>
   );
 }
