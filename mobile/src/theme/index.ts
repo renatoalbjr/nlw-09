@@ -7,6 +7,8 @@ export const THEME = {
 
     CAPTION_500: '#71717A',
     CAPTION_400: '#A1A1AA',
+    CAPTION_AD: '#C4C4C6',
+    CAPTION_200: '#E4E4E7',
     CAPTION_300: '#D4D4D8',
 
     SHAPE: '#2A2634',
