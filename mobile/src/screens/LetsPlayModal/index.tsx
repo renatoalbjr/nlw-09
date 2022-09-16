@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import { useEffect, useState } from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import checkCircle from '../../assets/CheckCircle.png';
-import X from '../../assets/X.png';
 import Heading from '../../components/Heading';
-import { RootStackParamList } from '../RootStackParamsList';
+
+import { THEME } from '../../theme';
 import { styles } from './styles';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LetsPlayModal'>
 
-export function LetsPlayModal({route, navigation}: Props) {
+export function LetsPlayModal() {
     const [discord, setDiscord] = useState<string>("");
+    const navigation = useNavigation()
+
+    const route = useRoute<RouteProp<ReactNavigation.RootParamList, 'LetsPlayModal'>>()
 
     useEffect(() => {
         fetch(`http://192.168.1.29:3333/ads/${route.params.adId}/discord`)
@@ -22,11 +25,11 @@ export function LetsPlayModal({route, navigation}: Props) {
     }, [])
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
         <View style={styles.content}>
-            <Image source={checkCircle} resizeMode='contain' style={{height: 64, marginBottom: 24}} />
+            <AntDesign name='checkcircleo' size={64} color={THEME.COLORS.SUCCESS} style={{marginBottom: 24}} />
             <TouchableOpacity onPress={() => navigation.goBack()} style={{position: 'absolute', top: 16, right: 16}}>
-                <Image source={X} resizeMode='contain' style={{height: 20}} />
+                <AntDesign name='close' size={20} color={THEME.COLORS.CAPTION_500} />
             </TouchableOpacity>
             <Heading subtitle='Agora é só começar a jogar!' title='Let’s play!' style={{justifyContent: 'center', alignItems: 'center', marginBottom: 24}}/>
             <View style={styles.footer}>
@@ -36,6 +39,6 @@ export function LetsPlayModal({route, navigation}: Props) {
                 </View>
             </View>
         </View>
-    </View>
+    </SafeAreaView>
   );
 }
