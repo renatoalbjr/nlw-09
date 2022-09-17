@@ -1,10 +1,10 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
+    flexDirection: "column",
+    alignItems: "center",
     paddingTop: 120,
   },
 
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     marginTop: 48,
     marginLeft: 32,
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
   },
 
   flatList: {

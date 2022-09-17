@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { THEME } from '../../theme';
+import { StyleSheet } from "react-native";
+import { THEME } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,14 +7,14 @@ export const styles = StyleSheet.create({
     height: 292,
     width: 180,
     padding: 20,
-    flexDirection: 'column',
+    flexDirection: "column",
     backgroundColor: THEME.COLORS.SHAPE,
     borderRadius: 8,
     marginRight: 16,
   },
   heading: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: "column",
     marginBottom: 16,
   },
   label: {
@@ -30,19 +30,19 @@ export const styles = StyleSheet.create({
   audioTrue: {
     color: THEME.COLORS.SUCCESS,
     fontFamily: THEME.FONT_FAMILY.BOLD,
-    fontSize: THEME.FONT_SIZE.SM,   
+    fontSize: THEME.FONT_SIZE.SM,
   },
   audioFalse: {
     color: THEME.COLORS.ALERT,
     fontFamily: THEME.FONT_FAMILY.BOLD,
-    fontSize: THEME.FONT_SIZE.SM,   
+    fontSize: THEME.FONT_SIZE.SM,
   },
   button: {
     backgroundColor: THEME.COLORS.PRIMARY,
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     borderRadius: 6,
     paddingHorizontal: 25,
     paddingVertical: 8,
@@ -52,5 +52,5 @@ export const styles = StyleSheet.create({
     color: THEME.COLORS.TEXT,
     fontFamily: THEME.FONT_FAMILY.SEMI_BOLD,
     fontSize: THEME.FONT_SIZE.SM,
-  }
+  },
 });
